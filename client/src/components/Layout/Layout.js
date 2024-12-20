@@ -3,14 +3,13 @@ import Footer from "./Footer";
 import Header from "./Header";
 import { Helmet } from "react-helmet";
 import { Toaster } from "react-hot-toast";
-const Layout = ({ children, title, description, keywords, author }) => {
+const Layout = ({ children, title, description, keywords }) => {
   return (
     <div>
       <Helmet>
         <meta charSet="utf-8" />
         <meta name="description" content={description} />
         <meta name="keywords" content={keywords} />
-        <meta name="author" content={author} />
         <title>{title}</title>
       </Helmet>
       <Header />
@@ -25,10 +24,9 @@ const Layout = ({ children, title, description, keywords, author }) => {
 };
 
 Layout.defaultProps = {
-  title: "Ecommerce website - shop now",
-  description: "mern stack project",
+  title: "Ecommerce Website - Shop Now",
+  description: "Mern Stack Project",
   keywords: "mern,react,node,mongodb",
-  author: "DD",
 };
 
 export default Layout;
